@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity  {
     int count = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -19,7 +20,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RelativeLayout touch = (RelativeLayout) findViewById(R.id.touch);
+        final RelativeLayout touch = (RelativeLayout) findViewById(R.id.touch);
         final TextView quoteText = (TextView) findViewById(R.id.quote);
         final TextView personText = (TextView) findViewById(R.id.person);
 
@@ -64,9 +65,6 @@ public class MainActivity extends ActionBarActivity {
 
                 }
 
-
-
-
             }
         });
     }
@@ -91,5 +89,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void buttonOnClick(View first)
+    {
+        Button button=(Button) first;
+        ((Button) first).setText("Made by Sai Gatram");
     }
 }
