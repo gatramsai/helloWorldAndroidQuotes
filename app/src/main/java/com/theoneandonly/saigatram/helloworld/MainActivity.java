@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -90,9 +91,22 @@ public class MainActivity extends ActionBarActivity  {
 
         return super.onOptionsItemSelected(item);
     }
+
+    private EditText zipCode;
+    private TextView textOut;
+
+
+
     public void buttonOnClick(View first)
     {
         Button button=(Button) first;
+        zipCode = (EditText) findViewById(R.id.zipCode);
+        textOut = (TextView) findViewById(R.id.zipOutput );
+        textOut.setText("Your Zip Code is: " + zipCode.getText());
+
+
         ((Button) first).setText("Made by Sai Gatram");
+
+
     }
 }
