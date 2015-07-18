@@ -1,10 +1,15 @@
 package com.theoneandonly.saigatram.helloworld;
 
+import android.nfc.Tag;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -96,17 +101,13 @@ public class MainActivity extends ActionBarActivity  {
     private TextView textOut;
 
 
-
     public void buttonOnClick(View first)
     {
-        Button button=(Button) first;
+        final Button button = (Button) first;
         zipCode = (EditText) findViewById(R.id.zipCode);
-        textOut = (TextView) findViewById(R.id.zipOutput );
+        textOut = (TextView) findViewById(R.id.zipOutput);
         textOut.setText("Your Zip Code is: " + zipCode.getText());
-
-
         ((Button) first).setText("Made by Sai Gatram");
-
-
     }
+
 }
